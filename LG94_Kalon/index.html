@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LG94</title>
+</head>
+<body>
+    <script>
+        var random = Math.floor(Math.random() *1001); // Generates a random number between 0 and 1000
+        var rtext = "Randomly generated number: "; // string to indicate a random number
+        var text = rtext.concat(random); // concatenate the random number to the string which is rtext
+        var br = "<br>";
+        document.write(text + br);
+
+        var hundreds = Math.floor((random%1000)/100)*100; 
+        var tens = Math.floor((random%100)/10)*10; 
+        var ones = random % 10;
+        // Calculate the hundreds, tens, and ones place of the random generated number
+
+        document.write(`Breakdown: ${hundreds} ${tens} ${ones}`);  // displays the breakdown of the random generated number
+
+        var cdate = new Date (); // gets the current date and time
+        document.write(br+ "DATE: " +cdate); //displays it
+    </script>
+</body>
+</html>
